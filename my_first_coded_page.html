@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>matty.Hero.barber</title>
+        <style>
+            body{
+                background-color: black;
+            }
+            h1 {
+                text-align: center;
+                color: black;
+                font-family: sans-serif;
+                font-size: 50px;
+                font-variant:inherit;
+                padding: 40px 0 10px 0;
+            }
+            h2 {
+                text-align: center;
+                font-size: 20px;
+                border-radius: 5px;
+                font-family: sans-serif;
+            }
+            p{
+                text-align:justify;
+                line-height: 1.5;
+                font-size: 20px;
+                margin: 20px 0 10px;
+                padding: 0 30px 0 30px;
+                font-family: sans-serif;
+            }
+            button{
+                display: block;
+                margin: 30px auto;
+                background: black;
+                color: yellow;
+                font-size: 20px;
+                font-family: sans-serif;
+                padding: 15px 30px 15px 30px;
+                border: none;
+                border-radius: 10px;
+                box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
+                transition: all 200ms ease-in-out;
+            }
+            button:hover{
+                background: yellow;
+                color: black;
+                cursor: pointer;
+                font-weight: bold;
+            }
+            .container {
+                background: linear-gradient(109.6deg, rgb(255, 219, 47) 11.2%, rgb(244, 253, 0) 100.2%);
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px 40 px;
+            }
+            .logo{
+                display: inline-block;
+                margin: 0auto;
+                max-width: 40%;
+                border-radius: 5px;
+            }
+            .moje {
+                display: block;
+                margin: 0 auto;
+                padding: 10px 180px 10px 180px;
+                max-width: 40%;
+                border-radius: 5px;
+            }
+            .moje:hover{
+                background: black;
+                cursor: pointer;
+            }
+            .official-page {
+                color: gray;
+                text-decoration: none;
+                padding: 0 30px;
+                font-size: 14px;
+                font-family: sans-serif;
+                font-stretch: wider;
+            }
+            .official-page:hover {
+                color: yellow;
+                background: black;
+                font-weight: bolder;
+            }
+            .barbershop {
+                display: block;
+                margin: 0 auto;
+                max-width: 80%;
+                border-radius: 5px;
+            }
+            .footer {
+                text-align: center;
+                color: gray;
+                font-size: 16px;
+                padding: 15px 0 15px 0;
+                font-family: sans-serif;
+            }
+        </style>
+  </head>
+  <body>
+      <div class="container">
+    <h1>matty
+        <span>
+<img class="logo"
+src=https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/373/original/logo.png?1637439445
+alt="logo"
+/>
+        </span>
+        barber</h1>
+    <hr>
+    <h2>This is my boyfriend.
+        <br>
+        He is a barber. 
+        The <em>best</em> barber I know.
+        </br>
+    </h2>
+    <a
+    href=https://www.instagram.com/matty_herobarber/
+    target="_blank"
+    >
+<img class="moje"
+    src=https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/376/original/moje.JPG?1637441537
+    alt="moje"
+    />
+    </a>
+    <p>
+        Hero Barber is a small traditional barbersop in the heart of Slovakia's capital city Bratislava.
+        You can get <strong>amazing services</strong> for solid price in two of their locations. I recommend you to go for location in Petrzalka district.
+        My boyfriend Matej can give you an amazing <strong>haircut</strong> there and you will leave with fresh look and <strong>well treated beard</strong>.
+        If you are in Slovakia right now, do not hesitate and get your reservation now!
+    </p>
+    <a
+    href=https://www.herobarber.sk/
+    target="_blank"
+    class="official-page"
+    >
+    Visit their official website
+    </a>
+    <button class="reservation">
+        I want to look good! 💇‍♂️
+    </button>
+    <img class="barbershop"
+    src=https://s3.amazonaws.com/shecodesio-production/uploads/files/000/021/366/original/barbershop.png?1637432483
+    alt="barbershop" />
+    <p class="footer">
+        Coded by Tati
+    </p>
+    </div>
+    <script>
+        function makeReservation () {
+            let gender = prompt("Are you a man or a woman?");
+            let city = prompt("Are you currently in Bratislava, Slovakia?");
+            if (gender === "man") {
+                if (city === "yes"){
+                    alert ("Make reservation today!");
+                    window.open ("https://services.bookio.com/hero-barber-petrzalka/widget?lang=sk");
+                }
+                else {
+                    alert ("Sorry we have barbershops only in Bratislava, Slovakia. Recommend us your Slovakian friends!");
+                }
+            }
+            else {
+            alert ("Sorry our clients are man-only. We would be happy if you can send your partner/brother/dad!");
+            }
+        }
+        let reservationButton = document.querySelector ("button");
+        reservationButton.addEventListener ("click", makeReservation);
+    </script>
+  </body>
+</html>
